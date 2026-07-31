@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -13,21 +14,87 @@ box-sizing:border-box;
 }
 
 body{
+
 margin:0;
 font-family:Arial;
+
 background:#000;
+
 color:#fff;
+
 text-align:center;
+
 overflow:hidden;
+
+position:relative;
+
 }
 
 
-/* MAIN */
+/* SMALL RED BACKGROUND EFFECT */
+
+body:before{
+
+content:"";
+
+position:fixed;
+
+width:350px;
+height:350px;
+
+top:-120px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+
+background:radial-gradient(
+circle,
+rgba(255,0,0,.20),
+transparent 65%
+);
+
+
+filter:blur(45px);
+
+animation:smallRed 6s infinite alternate;
+
+z-index:-1;
+
+}
+
+
+@keyframes smallRed{
+
+from{
+
+opacity:.3;
+
+transform:translateX(-50%) scale(1);
+
+}
+
+to{
+
+opacity:.7;
+
+transform:translateX(-50%) scale(1.15);
+
+}
+
+}
+
+
 
 .c{
+
 max-width:430px;
+
 margin:auto;
+
 padding:25px;
+
 }
 
 
@@ -35,34 +102,55 @@ padding:25px;
 /* PHOTO BLUE GLOW */
 
 .logo{
+
 width:160px;
+
 height:160px;
+
 border-radius:50%;
+
 object-fit:cover;
+
+
 border:3px solid #008cff;
 
+
 box-shadow:
+
 0 0 20px #008cff,
-0 0 40px #008cff,
-0 0 70px #008cff;
+
+0 0 40px #008cff;
+
 
 animation:blueGlow 3s infinite alternate;
+
 }
 
 
 @keyframes blueGlow{
 
+
 from{
+
 box-shadow:
+
 0 0 15px #008cff,
+
 0 0 30px #008cff;
+
 }
 
+
 to{
+
 box-shadow:
+
 0 0 40px #00bfff,
+
 0 0 80px #008cff;
+
 }
+
 
 }
 
@@ -74,16 +162,17 @@ h1{
 
 font-size:34px;
 
-color:#fff;
+color:white;
 
 text-shadow:
+
 0 0 15px red;
 
 }
 
 
 
-/* JOIN BUTTON RED */
+/* SOFT YELLOW JOIN BUTTON */
 
 .btn{
 
@@ -93,7 +182,8 @@ padding:20px;
 
 border-radius:20px;
 
-color:white;
+
+color:#000;
 
 text-decoration:none;
 
@@ -101,27 +191,29 @@ font-size:28px;
 
 font-weight:bold;
 
-background:#ff0000;
+
+background:#ffcc00;
 
 
 box-shadow:
-0 0 20px red,
-0 0 50px red;
+
+0 0 15px #ffcc00;
 
 
-animation:redGlow 2s infinite alternate;
+animation:yellowGlow 2s infinite alternate;
 
 }
 
 
 
-@keyframes redGlow{
+@keyframes yellowGlow{
 
 
 from{
 
 box-shadow:
-0 0 15px red;
+
+0 0 10px #ffcc00;
 
 }
 
@@ -129,16 +221,19 @@ box-shadow:
 to{
 
 box-shadow:
-0 0 60px red,
-0 0 100px red;
+
+0 0 35px #ffe680,
+
+0 0 60px #ffcc00;
 
 }
 
+
 }
 
 
 
-/* CARDS */
+/* CARD */
 
 .card{
 
@@ -170,8 +265,6 @@ text-shadow:none;
 
 
 
-/* STATS */
-
 .stats{
 
 display:flex;
@@ -194,6 +287,7 @@ color:#aaa;
 
 
 </style>
+
 
 </head>
 
@@ -229,7 +323,6 @@ href="https://t.me/+jfUDHkhxr644N2Jl">
 
 
 
-
 <div class="card">
 
 <div>
@@ -251,40 +344,28 @@ Register before timer ends.
 
 
 
-
-
 <div class="card stats">
 
 
 <div>
 <h2>50K+</h2>
-<div class="small">
-MEMBERS
+<div class="small">MEMBERS</div>
 </div>
-</div>
-
 
 
 <div>
 <h2>24/7</h2>
-<div class="small">
-SUPPORT
+<div class="small">SUPPORT</div>
 </div>
-</div>
-
 
 
 <div>
 <h2>100%</h2>
-<div class="small">
-SECURE
-</div>
+<div class="small">SECURE</div>
 </div>
 
 
-
 </div>
-
 
 
 
@@ -299,8 +380,8 @@ Ads Managed By <b>@ROJIEADS</b>
 </p>
 
 
-</div>
 
+</div>
 
 
 
@@ -314,19 +395,16 @@ let m=("0"+Math.floor(t/60)).slice(-2);
 
 let s=("0"+t%60).slice(-2);
 
-
 document.getElementById("timer").innerHTML=m+":"+s;
 
 
 if(t>0)t--;
 
-
 },1000);
-
 
 </script>
 
 
-
 </body>
+
 </html>
