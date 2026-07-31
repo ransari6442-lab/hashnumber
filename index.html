@@ -54,15 +54,45 @@ from{filter:hue-rotate(0deg)}
 to{filter:hue-rotate(360deg)}
 }
 
-.card{
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,.3);
-border-radius:22px;
-padding:20px;
-margin:20px 0;
-box-shadow:0 0 25px rgba(0,255,255,.3);
+body{
+margin:0;
+font-family:Arial;
+color:#fff;
+text-align:center;
+overflow:hidden;
+background:#050505;
+position:relative;
 }
+
+body:before{
+content:'';
+position:fixed;
+inset:-30%;
+background:
+radial-gradient(circle,rgba(255,0,0,.45),transparent 35%),
+radial-gradient(circle at 70% 30%,rgba(255,0,0,.25),transparent 35%);
+filter:blur(50px);
+animation:redGlow 8s linear infinite;
+z-index:-1;
+}
+
+@keyframes redGlow{
+0%{
+transform:scale(1);
+opacity:.5;
+}
+50%{
+transform:scale(1.2);
+opacity:1;
+}
+100%{
+transform:scale(1);
+opacity:.5;
+}
+}
+
+
+/* JOIN BUTTON RED ANIMATION */
 
 .btn{
 display:block;
@@ -72,22 +102,22 @@ color:#fff;
 text-decoration:none;
 font-size:28px;
 font-weight:bold;
-background:linear-gradient(90deg,#ff0000,#ffea00,#00ffff,#00ff55,#ff00ff,#ff0000);
-background-size:400%;
-animation:button 4s linear infinite;
-box-shadow:0 0 25px red,0 0 45px cyan;
-}
-@keyframes button{
-0%{background-position:0%}
-100%{background-position:400%}
+background:linear-gradient(90deg,#ff0000,#800000,#ff0000);
+background-size:300%;
+animation:redBtn 3s linear infinite;
+box-shadow:
+0 0 20px red,
+0 0 40px red;
 }
 
-.stats{display:flex}
-.stats div{flex:1}
-#timer{
-font-size:55px;
-color:#fff;
-text-shadow:0 0 15px yellow;
+@keyframes redBtn{
+0%{
+background-position:0%;
+}
+100%{
+background-position:300%;
+}
+}
 }
 .small{color:#ddd}
 </style>
