@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1722882055689800');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1722882055689800&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>HARSH NUMBER KING</title>
 
 <style>
 
-*{box-sizing:border-box}
+*{
+box-sizing:border-box;
+}
+
 
 body{
+
 margin:0;
-font-family:Arial;
+font-family:Arial,sans-serif;
+
 background:#000;
+
 color:#fff;
+
 text-align:center;
-overflow:hidden;
+
+overflow-x:hidden;
+
 position:relative;
+
 }
+
 
 
 /* STAR + RED GLOW BACKGROUND */
@@ -43,55 +38,68 @@ position:relative;
 body:before{
 
 content:"";
+
 position:fixed;
+
 inset:0;
 
 background:
+
 radial-gradient(circle at 50% 20%,rgba(255,0,0,.25),transparent 35%),
-radial-gradient(circle,rgba(255,0,0,.12),transparent 45%),
+
+radial-gradient(circle,rgba(255,0,0,.10),transparent 45%),
+
 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cg fill='white'%3E%3Ccircle cx='20' cy='30' r='1'/%3E%3Ccircle cx='90' cy='70' r='1.5'/%3E%3Ccircle cx='160' cy='40' r='1'/%3E%3Ccircle cx='120' cy='150' r='1'/%3E%3Ccircle cx='40' cy='170' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
 
-background-size:100% 100%,100% 100%,200px 200px;
+background-size:
+100%,
+100%,
+200px 200px;
 
-animation:spaceMove 10s infinite;
+
+animation:space 10s infinite alternate;
 
 z-index:-1;
 
 }
 
 
-@keyframes spaceMove{
+@keyframes space{
 
-0%{
+from{
 transform:scale(1);
 }
 
-50%{
+to{
 transform:scale(1.15);
 }
 
-100%{
-transform:scale(1);
-}
-
 }
 
 
 
-.c{
+
+.container{
+
+width:100%;
+
 max-width:430px;
+
 margin:auto;
-padding:25px;
+
+padding:20px;
+
 }
 
 
 
-/* BLUE PHOTO */
+/* IMAGE BLUE GLOW */
 
 .logo{
 
-width:160px;
-height:160px;
+width:150px;
+
+height:150px;
 
 border-radius:50%;
 
@@ -99,9 +107,13 @@ object-fit:cover;
 
 border:3px solid #008cff;
 
+
 box-shadow:
+
 0 0 20px #008cff,
+
 0 0 50px #008cff;
+
 
 animation:blue 3s infinite alternate;
 
@@ -111,52 +123,67 @@ animation:blue 3s infinite alternate;
 @keyframes blue{
 
 from{
-box-shadow:0 0 20px #008cff;
+
+box-shadow:
+0 0 20px #008cff;
+
 }
 
 to{
-box-shadow:0 0 70px #00bfff;
-}
+
+box-shadow:
+0 0 70px #00bfff;
 
 }
 
+}
 
 
-/* TITLE */
+
+
 
 h1{
 
-font-size:34px;
+font-size:32px;
+
+margin:15px 0;
 
 text-shadow:
+
 0 0 20px red;
 
 }
 
 
 
-/* YELLOW JOIN BUTTON */
 
-.btn{
+
+/* JOIN BUTTON */
+
+.join{
 
 display:block;
 
-padding:20px;
+padding:18px;
 
-border-radius:20px;
+border-radius:18px;
+
 
 background:#ffcc00;
 
 color:#000;
 
-text-decoration:none;
-
-font-size:28px;
+font-size:26px;
 
 font-weight:bold;
 
+text-decoration:none;
+
+
 box-shadow:
+
 0 0 20px #ffcc00;
+
 
 animation:yellow 2s infinite alternate;
 
@@ -167,46 +194,57 @@ animation:yellow 2s infinite alternate;
 @keyframes yellow{
 
 from{
-box-shadow:0 0 15px #ffcc00;
+
+box-shadow:
+0 0 15px #ffcc00;
+
 }
+
 
 to{
+
 box-shadow:
+
 0 0 50px #ffe680,
 0 0 80px #ffcc00;
-}
 
 }
 
+}
 
 
-/* CARD */
+
+
 
 .card{
 
-background:#050505;
+background:rgba(0,0,0,.85);
 
 border:1px solid #222;
 
 border-radius:20px;
 
-padding:20px;
+padding:18px;
 
-margin:20px 0;
+margin:18px 0;
 
 }
 
 
 
-/* TIMER */
+
 
 #timer{
 
-font-size:55px;
+font-size:50px;
 
 color:#fff;
 
+font-weight:bold;
+
 }
+
+
 
 
 
@@ -214,7 +252,10 @@ color:#fff;
 
 display:flex;
 
+gap:5px;
+
 }
+
 
 .stats div{
 
@@ -222,11 +263,83 @@ flex:1;
 
 }
 
+
+
 .small{
 
 color:#aaa;
 
+font-size:14px;
+
 }
+
+
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+
+.container{
+
+padding:15px;
+
+}
+
+
+.logo{
+
+width:125px;
+
+height:125px;
+
+}
+
+
+h1{
+
+font-size:27px;
+
+}
+
+
+.join{
+
+font-size:22px;
+
+padding:16px;
+
+}
+
+
+#timer{
+
+font-size:42px;
+
+}
+
+
+.stats h2{
+
+font-size:22px;
+
+}
+
+
+.card{
+
+padding:15px;
+
+}
+
+
+}
+
+
 
 </style>
 
@@ -236,23 +349,30 @@ color:#aaa;
 <body>
 
 
-<div class="c">
+<div class="container">
 
 
 <img class="logo"
 src="https://i.ibb.co/fdQB4sBM/Whats-App-Image-2026-07-31-at-8-51-42-PM.jpg">
 
 
-<h1>HARSH NUMBER KING</h1>
+
+<h1>
+HARSH NUMBER KING
+</h1>
 
 
-<p>Your Premium Prediction Destination 👑</p>
+<p>
+Your Premium Prediction Destination 👑
+</p>
 
 
 
-<a class="btn" href="https://t.me/+jfUDHkhxr644N2Jl">
+<a class="join"
+href="https://t.me/+jfUDHkhxr644N2Jl">
 🚀 JOIN NOW 🚀
 </a>
+
 
 
 
@@ -260,7 +380,9 @@ src="https://i.ibb.co/fdQB4sBM/Whats-App-Image-2026-07-31-at-8-51-42-PM.jpg">
 
 TIME LEFT FOR FREE JOIN
 
-<div id="timer">01:00</div>
+<div id="timer">
+01:00
+</div>
 
 <div class="small">
 Register before timer ends.
@@ -270,30 +392,47 @@ Register before timer ends.
 
 
 
+
 <div class="card stats">
+
 
 <div>
 <h2>50K+</h2>
-<div class="small">MEMBERS</div>
+<div class="small">
+MEMBERS
 </div>
+</div>
+
 
 <div>
 <h2>24/7</h2>
-<div class="small">SUPPORT</div>
+<div class="small">
+SUPPORT
 </div>
+</div>
+
 
 <div>
 <h2>100%</h2>
-<div class="small">SECURE</div>
+<div class="small">
+SECURE
+</div>
 </div>
 
+
 </div>
+
+
 
 
 <p class="small">
+
 ©2026 All rights reserved.
+
 <br>
+
 Ads Managed By <b>@ROJIEADS</b>
+
 </p>
 
 
@@ -301,23 +440,44 @@ Ads Managed By <b>@ROJIEADS</b>
 
 
 
+
+
 <script>
+
 
 let t=60;
 
+
 setInterval(()=>{
+
 
 let m=("0"+Math.floor(t/60)).slice(-2);
 
 let s=("0"+(t%60)).slice(-2);
 
+
 document.getElementById("timer").innerHTML=m+":"+s;
+
 
 if(t>0)t--;
 
+
 },1000);
 
+
+
+// AUTO REFRESH 60 SEC
+
+setTimeout(()=>{
+
+location.reload();
+
+},60000);
+
+
+
 </script>
+
 
 
 </body>
